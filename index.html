@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>For Devs | Votre partenaire numérique</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="brand">
+                <h1>FOR <span class="titre">DEVS</span></h1>
+                <h2 class="slogan">Votre entreprise en miniature</h2>
+            </div>
+            <img class="logo" src="ico.webp" alt="Logo For Devs">
+        </div>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <p>
+                For devs est une entreprise spécialisée dans la création de 
+                <span class="pre">sites web, applications de gestion d'entreprise et d'audiovisuel</span>.
+            </p>
+        </section>
+
+        <section class="presentation">
+            <h1 class="t">Qui sommes-nous ?</h1>
+            <div class="presentation-content">
+                <img src="man.webp" alt="Notre équipe en action">
+                <p>
+                    Nous sommes une équipe passionnée par la technologie, dédiée à offrir des solutions numériques innovantes pour les entreprises. 
+                    Que ce soit pour votre visibilité en ligne ou vos outils internes, nous sommes là pour vous.
+                </p>
+            </div>
+        </section>
+
+        <section class="mission">
+            <h2>Notre mission</h2>
+            <div class="grid">
+                <div class="c">
+                    <h3>Promouvoir la visibilité</h3>
+                    <p>Nous mettons votre entreprise en lumière sur le web.</p>
+                </div>
+                <div class="c">
+                    <h3>Attirer les clients</h3>
+                    <p>Avec des designs modernes et stratégiques.</p>
+                </div>
+                <div class="c">
+                    <h3>Faire la publicité</h3>
+                    <p>Nous mettons en avant vos produits et services.</p>
+                </div>
+                <div class="c">
+                    <h3>Collecte de données</h3>
+                    <p>Analyse des comportements et besoins des utilisateurs.</p>
+                </div>
+                <div class="c">
+                    <h3>Accessibilité 24h/7</h3>
+                    <p>Votre entreprise accessible partout, tout le temps.</p>
+                </div>
+                <div class="c">
+                    <h3>Communication directe</h3>
+                    <p>Dialogue instantané avec vos clients via vos plateformes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="equipe">
+        <h2>Notre Équipe</h2>
+        <div class="team-grid">
+            <div class="member">
+                <img src="abou.jpg" alt="Photo de Abou Koné">
+                <h3>Abou Koné</h3>
+            </div>
+            <div class="member">
+                <img src="harouna.jpg" alt="Photo de Harouna B Sanogo">
+                <h3>Harouna B Sanogo</h3>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Contact</h2>
+            <p><strong>Email :</strong> abouk6930@gmail.com</p>
+            <p><strong>Téléphone :</strong> 95 20 11 91 / 74 53 09 12</p>
+            <p><strong>Adresse :</strong> Bamako, Mali</p>
+            <p><strong>Date de création :</strong> Mars 2025</p>
+            <p><a href="mailto:abouk6930@gmail.com">Envoyez-nous un email</a></p>
+        </div>
+    </footer>
+    
+
+    <script>
+        const cards = document.querySelectorAll('.c');
+
+        function handleScroll() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 0;
+        
+                if (isVisible) {
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible'); // Retire la classe si elle sort de la vue
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+        
+    </script>
+</body>
+</html>
